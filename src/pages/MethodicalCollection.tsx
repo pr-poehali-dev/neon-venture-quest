@@ -27,9 +27,19 @@ export default function MethodicalCollection() {
           <div className="h-px w-16 bg-white/20 mt-6" />
         </div>
 
-        <div className="text-white/50 text-lg">
-          Раздел в разработке. Здесь появятся авторские разработки, методические рекомендации, памятки и презентации к урокам.
-        </div>
+        <ul className="space-y-3">
+          <li className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-5 py-4">
+            <span className="h-1.5 w-1.5 rounded-full bg-white/40 flex-shrink-0" />
+            <a
+              href="https://disk.yandex.ru/i/54NP-Tr3CCkgww"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors text-sm"
+            >
+              Исследовательская работа 4 класс «Микрозелень»
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );
