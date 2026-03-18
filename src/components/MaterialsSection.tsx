@@ -10,6 +10,7 @@ const sections = [
     description: 'Федеральные и региональные нормативные акты, образовательные стандарты, программы и учебные планы.',
     items: [
       { label: 'ФГОС НОО', url: 'https://sh-sazonovskaya-r19.gosweb.gosuslugi.ru/netcat_files/30/50/FGOS_NOO_ot_18.07.2022.pdf' },
+      { label: 'ФОП НОО Направления и цели внеурочной деятельности', url: 'https://sudact.ru/law/prikaz-minprosveshcheniia-rossii-ot-18052023-n-372/federalnaia-obrazovatelnaia-programma-nachalnogo-obshchego/iv/173/173.7/' },
       { label: 'Учебный план и расписание', url: null },
       { label: 'Локальные акты школы', url: null },
       { label: 'Должностные инструкции', url: null },
