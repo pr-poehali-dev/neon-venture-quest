@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import Icon from '@/components/ui/icon';
 
@@ -63,6 +64,7 @@ const sections = [
 
 export default function MaterialsSection() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   return (
     <section className="bg-zinc-950 py-20 px-8 md:px-16">
@@ -87,9 +89,13 @@ export default function MaterialsSection() {
                 activeSection === section.id && 'border-white/30 bg-white/10',
                 idx === 4 && 'md:col-span-2 lg:col-span-1'
               )}
-              onClick={() =>
-                setActiveSection(activeSection === section.id ? null : section.id)
-              }
+              onClick={() => {
+                if (section.id === 'practice') {
+                  navigate('/practical');
+                } else {
+                  setActiveSection(activeSection === section.id ? null : section.id);
+                }
+              }}
             >
               <div className="mb-4 flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white group-hover:bg-white/20 transition-colors">
