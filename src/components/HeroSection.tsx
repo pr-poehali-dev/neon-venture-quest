@@ -77,7 +77,7 @@ export default function HeroSection() {
                 </p>
                 <div className="flex gap-6 pt-4">
                   <a
-                    href="https://t.me/"
+                    href="https://t.me/Hhakimmov"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white/70 transition-colors hover:text-white"
