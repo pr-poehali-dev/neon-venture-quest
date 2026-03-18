@@ -2,6 +2,13 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
+const childrenItems = [
+  {
+    title: 'Диплом лауреата II степени — Коршунова Наталия, «Моё первое открытие»',
+    img: 'https://cdn.poehali.dev/projects/daccd443-1fe0-4e95-a060-ea7945817d80/bucket/ba647da8-d9d8-46e7-aea5-af43bb5b28fd.jpg',
+  },
+];
+
 const personalItems = [
   {
     title: 'Благодарственное письмо «Орлята России»',
@@ -90,8 +97,25 @@ export default function Results() {
             </div>
             <h2 className="text-xl font-medium text-white">Детские</h2>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <p className="text-sm text-white/40">Материалы появятся здесь.</p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {childrenItems.map((item) => (
+              <div
+                key={item.title}
+                className="group cursor-pointer rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-white/30 transition-all duration-300"
+                onClick={() => setLightbox(item.img)}
+              >
+                <div className="aspect-[3/4] overflow-hidden">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-3">
+                  <p className="text-sm text-white/70 leading-snug">{item.title}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
