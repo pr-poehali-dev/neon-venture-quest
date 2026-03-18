@@ -39,6 +39,17 @@ export default function PracticalAspects() {
               Методика организации школьной научно‑практической конференции младших школьников
             </a>
           </li>
+          <li className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-5 py-4">
+            <span className="h-1.5 w-1.5 rounded-full bg-white/40 flex-shrink-0" />
+            <a
+              href="https://disk.yandex.ru/i/6h9Uw7wYdVuGAw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors text-sm"
+            >
+              ТК внеурочное занятие «Этапы работы над проектом»
+            </a>
+          </li>
         </ul>
       </div>
     </div>
