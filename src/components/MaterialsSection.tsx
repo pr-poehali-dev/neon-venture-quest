@@ -20,7 +20,7 @@ const sections = [
     icon: 'BookOpen',
     description: 'Научные статьи, исследования и теоретическая база по ключевым педагогическим проблемам.',
     items: [
-      { label: 'Исследовательские навыки', url: null },
+      { label: 'Исследовательские навыки', url: 'https://disk.yandex.ru/i/y0pCbUAzKy-rJw' },
     ],
   },
   {
