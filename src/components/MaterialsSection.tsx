@@ -9,10 +9,10 @@ const sections = [
     icon: 'FileText',
     description: 'Федеральные и региональные нормативные акты, образовательные стандарты, программы и учебные планы.',
     items: [
-      'ФГОС и рабочие программы',
-      'Учебный план и расписание',
-      'Локальные акты школы',
-      'Должностные инструкции',
+      { label: 'ФГОС НОО', url: 'https://sh-sazonovskaya-r19.gosweb.gosuslugi.ru/netcat_files/30/50/FGOS_NOO_ot_18.07.2022.pdf' },
+      { label: 'Учебный план и расписание', url: null },
+      { label: 'Локальные акты школы', url: null },
+      { label: 'Должностные инструкции', url: null },
     ],
   },
   {
@@ -21,10 +21,10 @@ const sections = [
     icon: 'BookOpen',
     description: 'Научные статьи, исследования и теоретическая база по ключевым педагогическим проблемам.',
     items: [
-      'Обзор научной литературы',
-      'Концепции и подходы',
-      'Исследовательские статьи',
-      'Методологические основы',
+      { label: 'Обзор научной литературы', url: null },
+      { label: 'Концепции и подходы', url: null },
+      { label: 'Исследовательские статьи', url: null },
+      { label: 'Методологические основы', url: null },
     ],
   },
   {
@@ -33,10 +33,10 @@ const sections = [
     icon: 'Layers',
     description: 'Конспекты уроков, практические задания, разработки занятий и дидактические материалы.',
     items: [
-      'Конспекты уроков',
-      'Практические задания',
-      'Дидактические материалы',
-      'Технологические карты',
+      { label: 'Конспекты уроков', url: null },
+      { label: 'Практические задания', url: null },
+      { label: 'Дидактические материалы', url: null },
+      { label: 'Технологические карты', url: null },
     ],
   },
   {
@@ -45,10 +45,10 @@ const sections = [
     icon: 'Archive',
     description: 'Авторские методические разработки, рекомендации, памятки и полезные материалы для педагогов.',
     items: [
-      'Авторские разработки',
-      'Методические рекомендации',
-      'Памятки и инструкции',
-      'Презентации к урокам',
+      { label: 'Авторские разработки', url: null },
+      { label: 'Методические рекомендации', url: null },
+      { label: 'Памятки и инструкции', url: null },
+      { label: 'Презентации к урокам', url: null },
     ],
   },
   {
@@ -57,10 +57,10 @@ const sections = [
     icon: 'Award',
     description: 'Грамоты, дипломы, результаты олимпиад, публикации и профессиональные достижения.',
     items: [
-      'Награды и грамоты',
-      'Победители олимпиад',
-      'Публикации и статьи',
-      'Сертификаты и курсы',
+      { label: 'Награды и грамоты', url: null },
+      { label: 'Победители олимпиад', url: null },
+      { label: 'Публикации и статьи', url: null },
+      { label: 'Сертификаты и курсы', url: null },
     ],
   },
 ];
@@ -116,9 +116,21 @@ export default function MaterialsSection() {
               >
                 <ul className="space-y-2 pt-2 border-t border-white/10">
                   {section.items.map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-white/60">
+                    <li key={item.label} className="flex items-center gap-2 text-sm text-white/60">
                       <span className="h-1 w-1 rounded-full bg-white/40 flex-shrink-0" />
-                      {item}
+                      {item.url ? (
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {item.label}
+                        </a>
+                      ) : (
+                        item.label
+                      )}
                     </li>
                   ))}
                 </ul>
