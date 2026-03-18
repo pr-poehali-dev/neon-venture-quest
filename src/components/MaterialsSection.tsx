@@ -73,9 +73,7 @@ export default function MaterialsSection() {
           <h2 className="text-3xl font-light text-white md:text-4xl">
             Учебно-методические материалы
           </h2>
-          <p className="mt-4 text-white/50 text-lg font-light">
-            Хакимов Хакимжон Халилиллаевич
-          </p>
+          <p className="mt-4 text-white/50 text-lg font-light">Исследовательские навыки у младших школьников</p>
           <div className="mx-auto mt-6 h-px w-16 bg-white/20" />
         </div>
 
