@@ -92,6 +92,10 @@ export default function MaterialsSection() {
               onClick={() => {
                 if (section.id === 'practice') {
                   navigate('/practical');
+                } else if (section.id === 'methodical') {
+                  navigate('/methodical');
+                } else if (section.id === 'results') {
+                  navigate('/results');
                 } else {
                   setActiveSection(activeSection === section.id ? null : section.id);
                 }
